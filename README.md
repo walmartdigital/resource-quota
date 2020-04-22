@@ -20,14 +20,15 @@ cd resource-quota
 Show aggregate resource requests and limits. This is the same information
 displayed by `kubectl describe nodes` but in a easier to view format.
 
-```
-NAMESPACE      used.cpu  requests.cpu  limits.cpu  used.mem  requests.mem  limits.mem
-n1             2         10            40          57        64            256
-n2             10        670           2300        1459      2768          5376
-n3             5         2305          5300        1728      5676          11552
-n4             4         250           8520        2617      1992          11008
-n5             1         735           2632        2149      2756          6352
-n6             2         275           1760        576       1464          4608
+```console
+NAMESPACE          pod.qty  used.cpu  requests.cpu  limits.cpu  used.mem  requests.mem  limits.mem
+n1                 3        3         60            600         67        192           384
+n2                 1        0         150           150         0         256           256
+n3                 10       45        500           2600        1517      2160          4096
+n4                 26       263       1625          4500        1813      5366          10988
+n5                 13       47        460           9920        2734      2792          12864
+n6                 12       469       830           5470        2202      3052          6800
+n7                 6        17        225           1530        564       1248          3936
 ```
 
 ## Manifests output example
