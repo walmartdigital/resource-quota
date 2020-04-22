@@ -37,7 +37,7 @@ spec:
     requests.cpu: '$2'm
     limits.cpu: '$3'm
     requests.memory: '$4'Mi
-    limits.memory: '$5'Mi' > /home/{{ ansible_user }}/resource-quota/k8s-namespaces-quota/$1-mem-cpu-quota.yaml
+    limits.memory: '$5'Mi' > $HOME/resource-quota/k8s-namespaces-quota/$1-mem-cpu-quota.yaml
   fi
 }
 
@@ -122,4 +122,4 @@ function usage() {
     rm -f $tmpfile
 }
 
-usage $NAMESPACES
+usage
